@@ -1,7 +1,30 @@
+/*Problem: Given an array A of size N, print the reverse of it.
+
+Input:
+First line contains an integer denoting the test cases 'T'. T testcases follow. Each testcase contains two lines of input. First line contains N the size of the array A. The second line contains the elements of the array.
+
+Output:
+For each testcase, in a new line, print the array in reverse order.
+
+Constraints:
+1 <= T <= 100
+1 <= N <=100
+0 <= Ai <= 100
+
+Example:
+Input:
+1
+4
+1 2 3 4
+Output:
+4 3 2 1 
+*/
+
 #include <iostream>
 using namespace std;
 
-int main() {
+int mainfunction(){
+    
   int size; cin>>size;
 
   int array[size];
@@ -12,7 +35,8 @@ int main() {
   }
 
   //reverse the array
-  for(int i=0; i<=size/2; i++){
+  
+  for(int i=0; i<(size)/2; i++){
     swap(array[i],array[size-1-i]);
 
   }
@@ -24,3 +48,18 @@ int main() {
 
   return 0;
 }
+
+int main() {
+    
+    int T; cin >> T;
+    
+    for(int i=1; i<=T; i++){
+        mainfunction();
+        cout<<endl;
+    }
+  
+
+	return 0;
+}
+
+
