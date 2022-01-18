@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   int n; cin>>n;
+   int r=0;
+
+   if(n==1){
+     cout<<"true";
+   }
+   else if(n==0){
+     cout<<"false";
+   }
+   else{
+     while(n>1){
+     r = n%2;
+     n = n/2;
+
+     if(r==1){
+       cout<<"false";
+       break;
+     }
+     else if(n==1){
+       cout<<"true";
+     }
+     else if(r==0){
+      continue;
+     }
+     
+     
+   }
+
+   }
+
+   
+
+   return 0;
+}
