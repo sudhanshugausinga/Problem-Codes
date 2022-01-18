@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+
+void inputArray(int arr[], int size){
+  for(int i=0; i<size; i++){
+    cin >> arr[i];
+  }
+}
+
+void printArray(int arr[], int size){
+  for(int i=0; i<size; i++){
+    cout << arr[i] <<" ";
+  }
+}
+
+void squaringElements(int arr[], int size){
+  for(int i=0; i<size; i++){
+    arr[i]*=arr[i];
+  }
+}
+
+void sortingArray(int arr[], int size){
+  for(int i=0; i<size; i++){
+    for(int j=i+1; j<size; j++){
+      if(arr[i]>arr[j]){
+        swap(arr[i],arr[j]);
+
+      }
+    }
+  }
+}
+
+int main(){
+
+  int size; cin>>size;
+  int array1[size];
+
+  inputArray(array1, size);
+
+  squaringElements(array1, size);
+
+  sortingArray(array1, size);
+
+  printArray(array1, size);
+
+  return 0;
+}
