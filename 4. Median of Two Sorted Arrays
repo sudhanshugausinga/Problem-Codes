@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+
+void getMedian(int arr[], int size){
+  
+  if(size%2==1){
+     cout << arr[size/2];}
+  else {                                         //if(size%2==0)
+     cout << (arr[size/2]+arr[(size/2) +1])/2;
+  }
+  
+}
+
+void sortingArray(int arr[], int size){
+  for(int i=0; i<size; i++){
+    for(int j=i+1; j<size; j++){
+      if(arr[i]>arr[j]){
+        swap(arr[i],arr[j]);
+
+      }
+    }
+  }
+}
+
+void mergeArray(int array1[], int array2[], int array3[], int size1, int size2, int size3){
+  
+  for(int i=0; i<size3; i++){
+    if(i<size1){
+      array3[i]=array1[i];
+    }
+    else {                     //if(i>=size1)
+      array3[i]=array2[i-size1];
+    }
+  }
+}
+
+void inputArray(int arr[], int size){
+  for(int i=0; i<size; i++){
+    cin >> arr[i];
+  }
+}
+
+int main(){
+
+  int size1, size2; cin >> size1 >> size2;
+  int array1[size1];
+  int array2[size2];
+  
+  int size3 = size1 + size2;
+  int array3[size3];
+
+  inputArray(array1, size1);
+  inputArray(array2, size2);
+
+  mergeArray(array1, array2, array3, size1, size2, size3);
+
+  sortingArray(array3, size3);
+
+  getMedian(array3, size3);
+  
+  cout<< endl;
+               for(int i=0; i<size3; i++){
+                   cout << array3[i] <<" ";
+               }
+              
+
+  return 0;
+}
