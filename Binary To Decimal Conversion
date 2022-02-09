@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+//Binary To Decimal Conversion
+
+int main() {
+	
+	int n; cin>>n;
+	int twos = 1;
+	int sum = 0;
+	int a = 0;
+	
+	while(n>0){
+	          a = n%2;
+	          n = n/10;
+	          
+	          sum = sum + a*twos;
+	          twos = twos*2;
+	}
+	
+	cout << sum <<endl;
+	
+	return 0;
+}
